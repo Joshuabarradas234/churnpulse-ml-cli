@@ -1,6 +1,9 @@
 # ChurnPulse
 
 A packaged Python **ML training CLI** that takes a tabular CSV, trains a baseline model, and outputs a **saved model + metrics + a human-readable report**.
+##
+> A production-ready machine learning CLI that helps businesses reduce revenue loss by predicting customer churn (customers likely to leave or cancel).
+
 
 ## What it does (in ~20 seconds)
 - Loads a CSV dataset (you provide the path)
