@@ -4,6 +4,11 @@ A packaged Python **ML training CLI** that takes a tabular CSV, trains a baselin
 ##
 > A production-ready machine learning CLI that helps businesses reduce revenue loss by predicting customer churn (customers likely to leave or cancel).
 
+## Business problem + ROI
+
+Customer churn (customers who stop buying/cancel) is a major driver of revenue loss—acquiring new customers is typically more expensive than retaining existing ones. This project predicts which customers are most likely to churn so teams can intervene early with targeted retention actions (e.g., support outreach, tailored offers, win-back campaigns). It helps businesses prioritize limited retention budgets by focusing effort on the highest-risk customers first instead of applying blanket discounts to everyone. Decisions enabled include: who to contact, when to contact them, what offer/service action to use, and how to measure impact over time.  
+Example: if retention outreach costs **£2 per customer**, the model helps concentrate spend on high-risk customers rather than messaging the entire customer base.
+
 
 ## What it does (in ~20 seconds)
 - Loads a CSV dataset (you provide the path)
