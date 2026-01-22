@@ -1,0 +1,9 @@
+{
+  "trained_at_utc": "2026-01-22T14:51:58.517388+00:00",
+  "seed": 42,
+  "test_size": 0.2,
+  "rows": 506,
+  "cols": 14,
+  "target": "MEDV",
+  "model_artifact": "model.joblib"
+}

@@ -1,0 +1,34 @@
+# virtual env
+.venv/
+venv/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# build/dist
+build/
+dist/
+*.egg-info/
+
+# optional: generated outputs (uncomment if you DON'T want to commit them)
+# artifacts/
+# reports/
+# figures/
+
+artifacts/model.joblib
+data/
+
+
