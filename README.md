@@ -33,6 +33,14 @@ RMSE/MAE indicate the typical prediction error is ~**2–3 units** in the target
   - `artifacts/metadata.json` (run metadata)
   - `reports/report.md` (quick report for humans)
 
+## Project structure
+
+- `src/churnpulse/` – CLI + training pipeline code
+- `artifacts/` – generated outputs (model + metrics). Not committed.
+- `reports/` – generated human-readable report. Not committed.
+- `tests/` – unit tests
+- `Dockerfile` – containerized quickstart
+ 
 ## Quickstart (Windows / PowerShell)
 
 ```powershell
