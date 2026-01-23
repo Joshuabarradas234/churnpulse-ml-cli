@@ -58,3 +58,11 @@ docker build -t churnpulse .
 
 # Run (mount repo into container, run from /work)
 docker run --rm -v "${PWD}:/work" -w /work churnpulse --csv "/work/data/raw/telco_churn.csv"
+
+Training complete
+- Model: artifacts/model.joblib
+- Metrics: artifacts/metrics.json
+- Report: reports/report.md
+type .\artifacts\metrics.json
+type .\reports\report.md
+
