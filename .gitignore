@@ -28,7 +28,6 @@ dist/
 # reports/
 # figures/
 
-artifacts/model.joblib
 data/
 
 # generated outputs (created at runtime)
