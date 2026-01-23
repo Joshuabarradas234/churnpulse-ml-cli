@@ -53,9 +53,7 @@ churnpulse --csv ".\data\raw\telco_churn.csv"
 
 ## Docker Quickstart (recommended)
 
-This is the fastest way to run ChurnPulse without installing Python locally.
-
-### Build
+Build:
 ```bash
 docker build -t churnpulse .
 
