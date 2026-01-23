@@ -53,7 +53,8 @@ churnpulse --csv ".\data\raw\telco_churn.csv"
 
 ## Docker Quickstart (recommended)
 
-Build:
-```bash
+# Build (from repo root)
 docker build -t churnpulse .
 
+# Run (mount repo into container, run from /work)
+docker run --rm -v "${PWD}:/work" -w /work churnpulse --csv "/work/data/raw/telco_churn.csv"
