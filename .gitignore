@@ -31,4 +31,8 @@ dist/
 artifacts/model.joblib
 data/
 
+# generated outputs (created at runtime)
+artifacts/
+reports/
+
 
