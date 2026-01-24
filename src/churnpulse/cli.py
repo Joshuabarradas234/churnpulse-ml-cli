@@ -46,3 +46,5 @@ def train_cmd(
         f"Recall={metrics['recall']:.3f}, "
         f"F1={metrics['f1']:.3f}"
     )
+if __name__ == "__main__":
+    app()

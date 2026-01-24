@@ -28,7 +28,9 @@ dist/
 # reports/
 # figures/
 
-data/
+data/**
+!data/raw/
+!data/raw/demo_churn.csv
 
 # generated outputs (created at runtime)
 artifacts/
