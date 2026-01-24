@@ -23,13 +23,15 @@ Example: if retention outreach costs **£2 per customer**, the model helps conce
 
 ## Results (baseline)
 
-Metrics are computed on a holdout split (baseline model).
+Example metrics (holdout set):
 
-| Metric | Value |
-|-------:|------:|
-| RMSE   | 2.988 |
-| MAE    | 2.078 |
-| R²     | 0.878 |
+- ROC-AUC: 0.992  
+- Precision: 0.941  
+- Recall: 0.960  
+- F1: 0.950  
+
+(Your numbers will vary by dataset/seed.)
+
 
 **Interpretation:** R² of **0.878** suggests the model explains most of the variance in the target.  
 RMSE/MAE indicate the typical prediction error is ~**2–3 units** in the target’s scale. In production, you’d calibrate an action threshold (e.g., “high-risk” band) based on business tolerance for false alarms vs missed churners.
@@ -72,6 +74,10 @@ python -m pip install -e . --no-build-isolation
 churnpulse --csv ".\data\raw\telco_churn.csv"
 ```
 ## Docker Quickstart (recommended)
+docker build -t churnpulse .
+docker run --rm -v "${PWD}:/work" -w /work churnpulse --csv /work/data/raw/demo_churn.csv --target Churn
+type .\artifacts\metrics.json
+type .\reports\report.md
 
 # Build (from repo root)
 docker build -t churnpulse .
