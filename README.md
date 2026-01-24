@@ -91,22 +91,5 @@ type .\reports\report.md
 - **PowerShell path mounts:** use `-v "${PWD}:/work"` (CMD would be `-v "%cd%:/work"`).
 - **Target column error:** if your dataset doesn’t have `Churn`, pass the correct label column via `--target <colname>`.
 
-  name: CI
-
-on:
-  push:
-  pull_request:
-
-jobs:
-  docker:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Build image
-        run: docker build -t churnpulse .
-
-      - name: CLI help
-        run: docker run --rm churnpulse --help
-
+ CI: GitHub Actions builds the Docker image and runs --help.
 
