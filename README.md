@@ -21,6 +21,7 @@ docker run --rm -v "${PWD}:/work" -w /work churnpulse `
 type .\artifacts\metrics.json
 type .\reports\report.md
 
+```
 ## Quickstart (Local install) — Windows PowerShell
 
 # 1) from repo root
