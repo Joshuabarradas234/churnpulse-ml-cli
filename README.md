@@ -59,9 +59,9 @@ artifacts/ and reports/ are intentionally not committed (generated outputs).
 
 ## Proof of output (from CI artifact)
 
-![Generated report](assets/report.png)
-![Metrics snapshot](assets/metrics.png)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/b38f88dc-4cfa-4894-9ec5-5452c2c952f6" />
 
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/cbf29efd-7fdc-4c83-8903-f324688fc46f" />
 
 # Business problem + ROI
 
