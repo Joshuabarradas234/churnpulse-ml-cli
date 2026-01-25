@@ -24,6 +24,7 @@ type .\reports\report.md
 ```
 ## Quickstart (Local install) — Windows PowerShell
 
+```powershell
 # 1) from repo root
 python -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
@@ -39,7 +40,7 @@ churnpulse --csv .\data\raw\demo_churn.csv --target Churn
 # view outputs
 type .\artifacts\metrics.json
 type .\reports\report.md
-
+```
 # Outputs (generated)
 
 After a run, the CLI writes reproducible artifacts:
@@ -63,17 +64,19 @@ This project predicts which customers are most likely to churn so teams can inte
 
 Example: if retention outreach costs £2 per customer, the model helps concentrate spend on high-risk customers rather than messaging the entire customer base.
 
-# Results (baseline)
+```md
+## Results (baseline)
 
 Example metrics from a holdout split (your numbers will vary by dataset/seed):
 
-Metric	Value
-ROC-AUC	0.992
-Precision	0.941
-Recall	0.960
-F1	0.950
+- ROC-AUC: 0.992  
+- Precision: 0.941  
+- Recall: 0.960  
+- F1: 0.950  
 
 Interpretation: in production, you’d calibrate an action threshold (e.g., a “high-risk” band) based on business tolerance for false alarms vs missed churners.
+
+```
 
 # Project structure
 
