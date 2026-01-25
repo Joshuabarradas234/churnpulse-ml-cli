@@ -13,12 +13,14 @@ A packaged Python **ML training CLI** that takes a tabular CSV, trains a baselin
 docker build -t churnpulse .
 
 # run training using the included demo dataset (writes outputs to ./artifacts and ./reports)
-docker run --rm -v "${PWD}:/work" -w /work churnpulse --csv /work/data/raw/demo_churn.csv --target Churn
+docker run --rm -v "${PWD}:/work" -w /work churnpulse `
+  --csv /work/data/raw/demo_churn.csv `
+  --target Churn
 
 # view outputs
 type .\artifacts\metrics.json
 type .\reports\report.md
-```
+
 ## Quickstart (Local install) — Windows PowerShell
 
 # 1) from repo root
@@ -50,7 +52,7 @@ artifacts/metadata.json — run metadata
 reports/report.md — quick human-readable report
 
 artifacts/ and reports/ are intentionally not committed (generated outputs).
-
+```
 # Business problem + ROI
 
 Customer churn (customers who stop buying/cancel) is a major driver of revenue loss—acquiring new customers is typically more expensive than retaining existing ones. This project predicts which customers are most likely to churn so teams can intervene early with targeted retention actions (e.g., support outreach, tailored offers, win-back campaigns). It helps prioritize limited retention budgets by focusing effort on high-risk customers first instead of applying blanket discounts to everyone.
