@@ -53,40 +53,6 @@ artifacts/metadata.json — run metadata
 reports/report.md — quick human-readable report
 
 artifacts/ and reports/ are intentionally not committed (generated outputs).
-```
-Quickstart (Local install) — Windows PowerShell
-1) from repo root
-python -m venv .venv
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-
-2) install this project (editable)
-python -m pip install -U pip setuptools wheel
-python -m pip install -e . --no-build-isolation
-
-3) run training (demo dataset)
-churnpulse --csv .\data\raw\demo_churn.csv --target Churn
-
-view outputs
-type .\artifacts\metrics.json
-type .\reports\report.md
-
-Quickstart (Local install) — Windows PowerShell
-1) from repo root
-python -m venv .venv
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-
-2) install this project (editable)
-python -m pip install -U pip setuptools wheel
-python -m pip install -e . --no-build-isolation
-
-3) run training (demo dataset)
-churnpulse --csv .\data\raw\demo_churn.csv --target Churn
-
-view outputs
-type .\artifacts\metrics.json
-type .\reports\report.md
 
 
 # Business problem + ROI
