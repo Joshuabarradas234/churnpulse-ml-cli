@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  actions: write
 
 jobs:
   docker:
@@ -39,4 +40,5 @@ jobs:
             artifacts/metrics.json
             reports/report.md
           if-no-files-found: warn
+
 
