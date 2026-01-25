@@ -1,0 +1,37 @@
+
+```yaml
+name: CI
+
+on:
+push:
+ branches: ["main"]
+pull_request:
+
+jobs:
+docker:
+ runs-on: ubuntu-latest
+ steps:
+   - uses: actions/checkout@v4
+
+   - name: Build Docker image
+     run: docker build -t churnpulse .
+
+   - name: CLI help
+     run: docker run --rm churnpulse --help
+
+   - name: Smoke test training run (demo dataset)
+     run: |
+       docker run --rm \
+         -v "${{ github.workspace }}:/work" \
+         -w /work \
+         churnpulse \
+         --csv /work/data/raw/demo_churn.csv \
+         --target Churn
+
+   - name: Upload outputs (report + metrics)
+     uses: actions/upload-artifact@v4
+     with:
+       name: churnpulse-outputs
+       path: |
+         artifacts/metrics.json
+         reports/report.md
