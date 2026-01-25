@@ -57,6 +57,11 @@ reports/report.md — quick human-readable report
 
 artifacts/ and reports/ are intentionally not committed (generated outputs).
 
+## Proof of output (from CI artifact)
+
+![Generated report](assets/report.png)
+![Metrics snapshot](assets/metrics.png)
+
 
 # Business problem + ROI
 
