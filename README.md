@@ -1,9 +1,12 @@
 # ChurnPulse
 
 A packaged Python **ML training CLI** that takes a tabular CSV, trains a baseline model, and outputs a **saved model + metrics + a human-readable report**.
-##
-> A production-ready machine learning CLI that helps businesses reduce revenue loss by predicting customer churn (customers likely to leave or cancel).
-## Quickstart (Docker) — recommended
+
+> A lightweight, reproducible churn training pipeline you can run locally or in Docker.
+
+---
+
+## Quickstart (Docker) — recommended (Windows PowerShell)
 
 ```powershell
 # from repo root
