@@ -1,3 +1,5 @@
+[![CI](https://github.com/Joshuabarradas234/churnpulse-ml-cli/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Joshuabarradas234/churnpulse-ml-cli/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/github/license/Joshuabarradas234/churnpulse-ml-cli)](LICENSE)
 # ChurnPulse
 
 A packaged Python **ML training CLI** that takes a tabular CSV, trains a baseline model, and outputs a **saved model + metrics + a human-readable report**.
@@ -67,14 +69,28 @@ Example: if retention outreach costs £2 per customer, the model helps concentra
 ```md
 ## Results (baseline)
 
-Example metrics from a holdout split (your numbers will vary by dataset/seed):
+Example metrics from a holdout split (your numbers vary by dataset/seed):
 
-- ROC-AUC: 0.992  
-- Precision: 0.941  
-- Recall: 0.960  
-- F1: 0.950  
+| Metric      | Value |
+|------------|-------:|
+| ROC-AUC     | 0.992  |
+| Precision   | 0.941  |
+| Recall      | 0.960  |
+| F1          | 0.950  |
 
-Interpretation: in production, you’d calibrate an action threshold (e.g., a “high-risk” band) based on business tolerance for false alarms vs missed churners.
+### How to interpret this in the real world
+This model outputs churn probabilities. In production you pick an **action threshold** that matches your cost trade-offs:
+
+- **Lower threshold** → catch more churners (**higher recall**) but contact more non-churners (**more false positives**).
+- **Higher threshold** → fewer wasted contacts (**higher precision**) but miss more churners.
+
+A common approach is to define a “high-risk” band (e.g., top 10–20% by predicted risk) and run retention outreach only on that segment.
+
+### What I’d do next (to make it production-ready)
+- Add probability calibration checks (reliability curve / calibration error).
+- Choose threshold using a simple cost model (contact cost vs churn loss).
+- Add cross-validation + confidence intervals for metrics.
+- Track drift / retrain cadence once deployed.
 
 ```
 
